@@ -1,0 +1,73 @@
+
+1 Given a list of words, group the words that are anagrams of each other.
+
+Two words are anagrams if they contain the same letters in a different order. For example, "eat" and "tea" are anagrams.
+
+Input:
+List("eat", "tea", "tan", "ate", "nat", "bat")
+
+Output 
+
+List(
+  List("eat", "tea", "ate"),
+  List("tan", "nat"),
+  List("bat")
+)
+
+2 Write a function called filterAndTransform that:
+
+Takes a List[Int]
+Takes a filtering function: Int => Boolean
+Takes a transforming function: Int => Int
+Returns a new list that:
+Filters the input list using the filtering function
+Transforms the filtered results using the transforming function
+You must use higher-order functions like .filter and .map — no loops!
+
+3 Write a Scala function that:
+
+Accepts an ArrayBuffer of integers.
+Removes all duplicates.
+Sorts the result in ascending order.
+Returns the modified ArrayBuffer.
+
+4 Problem:
+From a list of strings, return names that have length between 3 and 6 (inclusive).
+
+val names = List("Ann", "Bob", "Christine", "Dave", "Eva", "Frank")
+
+5 Given a list of strings, reverse each string and convert it to uppercase.
+
+val words = List("scala", "rocks", "functional", "programming")
+
+6 Given a list of integers, return the sum of only the positive numbers.
+val nums = List(-5, 10, -3, 7, 0, 2)
+7 Given a list of words, count how many start with the letter "a" (case-insensitive).
+val words = List("apple", "banana", "avocado", "grape", "apricot", "melon")
+8 Given a list of integers, return a new list containing the square of even numbers only.
+
+val numbers = List(1, 2, 3, 4, 5, 6)
+
+9 Find the Second Largest Number in the given list
+  val lst = List(10,50,20,60)
+10 Count Occurrences of a Character
+Problem: Write function to  Count the occurrences of a character in a string.
+val str ="chennai"
+
+11 Write a function to take list as argument and return list Remove Duplicates from a List
+
+12 Problem: Write a function to calculate the factorial of a number.
+
+13 Create a class that supports basic arithmetic operations: addition, subtraction, multiplication, and division.
+
+14 Create a BankAccount class that supports deposits, withdrawals, and balance checks.
+15  Create a Rectangle class with width and height, calculate area and perimeter.
+16 create Inventory class with additem, removeitems,ShowInventory
+17 Create a list of books and filter them by a specific author use case class & list with case class
+18 List contain elements 
+      val lst =List("what","why", "when","how")
+    change first letter into upper case suffix ? to list element
+
+20 
+
+

@@ -1,0 +1,123 @@
+1 Write a Scala program that prints the numbers from 1 to 100. But for multiples of 3, print "Apple" instead of the number, and for the multiples of 5, print "Mango". For numbers which are multiples of both 3 and 5, print "Apple Mango".
+
+
+
+
+
+
+
+
+
+2 Write a Scala class named Person that has the following:
+
+Two properties: name (String) and age (Int)
+
+A method greet() that returns a greeting like:
+"Hello, my name is Alice and I am 25 years old."
+
+
+
+
+
+
+
+
+
+3 Create a class Rectangle with two parameters: width and height.
+
+Add two methods:
+
+area(): returns the area.
+
+perimeter(): returns the perimeter.
+
+
+4 Create a class BankAccount with:
+
+a property balance (initially 0.0),
+
+methods deposit(amount: Double) and withdraw(amount: Double),
+
+a method getBalance() to return the balance.
+
+
+
+
+
+
+5 Create a class Student with:
+
+a name and a list of grades (List[Double])
+
+a method averageGrade() that returns the average
+
+a method hasPassed() that returns true if average ≥ 60
+--------------------------------------------------------------------------------------------------
+6 Problem:
+Given a list of names, write a Scala program that:
+
+Filters out names shorter than 5 characters.
+
+Capitalizes the remaining names (first letter uppercase, rest lowercase).
+
+Returns the transformed list.
+------------------------------------------------------------------------------------------------
+7  Given a list of integers, write code to:
+
+Filter even numbers
+
+Multiply them by 2
+
+Return the new list
+-----------------------------------------------------------------------------------
+8 Count Words Starting With a Specific Letter
+Problem:
+Given a list of words, count how many start with the letter "a" (case-insensitive).
+
+
+lst = "ram","Ram","babjee","Babjee","babjee"
+
+
+-----------------------------
+From a list of strings, return names that have length between 3 and 6 (inclusive).
+
+val names = List("Ann", "Bob", "Christine", "Dave", "Eva", "Frank")
+
+9 Challenge: Remove Duplicates and Sort
+Write a Scala function that:
+Accepts an ArrayBuffer of integers.
+
+Removes all duplicates.
+
+Sorts the result in ascending order.
+
+Returns the modified ArrayBuffer.
+
+
+
+
+10 Write a function called filterAndTransform that:
+
+Takes a List[Int]
+
+Takes a filtering function: Int => Boolean
+
+Takes a transforming function: Int => Int
+
+Returns a new list that:
+
+Filters the input list using the filtering function
+
+Transforms the filtered results using the transforming function
+
+11 Challenge: Find duplicate elements in a list.
+  input List(1, 2, 2, 3, 3, 4))
+  output List(2,3)
+
+13 Binary Search
+
+
+
+lst.
+
+

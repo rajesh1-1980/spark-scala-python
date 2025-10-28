@@ -1,0 +1,128 @@
+1 Given an RDD of integers, filter and return only the even numbers.
+rdd = sc.parallelize([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+2 From an RDD of words, return only the words that have more than 5 characters.
+words = sc.parallelize(["apple", "banana", "kiwi", "pineapple", "grape", "watermelon"])
+
+3 Given an RDD of text lines, return only the lines that contain the word "error".
+
+logs = sc.parallelize([
+    "INFO: Process started",
+    "ERROR: Missing file",
+    "WARNING: Low memory",
+    "ERROR: Invalid input"
+])
+
+4 Given an RDD of strings, filter out any that are empty or contain only whitespace.
+
+strings = sc.parallelize(["hello", "", "   ", "spark", "rdd", None])
+
+5 Given an RDD of (student, grade) tuples, return only the students who scored at least 60.
+grades = sc.parallelize([("Alice", 85), ("Bob", 42), ("Charlie", 77), ("David", 58)])
+
+6  Given an RDD of (city, temperature in Celsius), convert all temperatures to Fahrenheit.
+temps = sc.parallelize([("New York", 22), ("Los Angeles", 26), ("Chicago", 18)])
+
+7 Given an RDD of (employee_name, salary), apply a 10% bonus to each salary.
+
+salaries = sc.parallelize([("Alice", 50000), ("Bob", 60000), ("Charlie", 55000)])
+
+8  Given an RDD of (student, grade), convert all grades to a scale out of 4.0 (e.g., 100 → 4.0, 75 → 3.0).
+
+grades = sc.parallelize([("Alice", 100), ("Bob", 75), ("Charlie", 50)])
+
+9 Given an RDD of (item, price), round the prices to the nearest dollar.
+
+prices = sc.parallelize([("apple", 1.25), ("banana", 0.99), ("pear", 1.74)])
+
+10 Match Employee Names with Departments
+employees = sc.parallelize([(1, "Alice"), (2, "Bob"), (3, "Charlie")])
+departments = sc.parallelize([(1, "HR"), (2, "Engineering")])
+
+11  Left Outer Join - Include All Employees, Even Without a Department
+
+12  Right Outer Join - Include All Departments, Even Without Employees
+13 Full Outer Join - Combine All Records
+Description: Combine two RDDs of product IDs with names and prices, showing all data, even if there's no match.
+14 Group Students' Grades from Two Subjects
+(student, math_grade)
+(student, science_grade)
+Use cogroup() to group all grades per student.
+15 Group Products with Multiple Price Records from Two Vendors
+Description:
+
+Vendor A: (product_id, price)
+
+Vendor B: (product_id, price)
+
+
+vendor_a = sc.parallelize([(1, 100), (2, 150), (3, 200)])
+vendor_b = sc.parallelize([(1, 110), (2, 145), (4, 300)])
+
+16  Combine Attendees of Two Events
+Description: Combine attendees from Event A and Event B into one list.
+event_a = sc.parallelize(["Alice", "Bob", "Charlie"])
+event_b = sc.parallelize(["David", "Eve", "Alice"])
+
+17 Find customers who purchased both Product X and Product Y.
+product_x = sc.parallelize(["Alice", "Bob", "Charlie"])
+product_y = sc.parallelize(["Charlie", "David", "Alice"])
+
+18 ou have a list of all users and a list of subscribed users. Find the unsubscribed ones.
+all_users = sc.parallelize(["Alice", "Bob", "Charlie", "David"])
+subscribed = sc.parallelize(["Alice", "Charlie"])
+
+19 Remove duplicate email addresses from a list.
+emails = sc.parallelize(["a@example.com", "b@example.com", "a@example.com", "c@example.com"])
+
+20 Pair All Students With All Projects
+Pair each student with every project for a brainstorming assignment.
+
+students = sc.parallelize(["Alice", "Bob"])
+projects = sc.parallelize(["P1", "P2", "P3"])
+
+
+21 Given an RDD of log lines, count the total number of lines.
+
+logs = sc.parallelize([
+    "INFO Server started",
+    "WARN Low memory",
+    "ERROR Disk failure",
+    "INFO User login"
+])
+
+22 Count how many lines start with "ERROR".
+error_logs = logs.filter(lambda line: line.startswith("ERROR"))
+error_count = error_logs.count()
+23 Count Unique Users in a Session
+sc.parallelize(["Alice", "Bob", "Alice", "Charlie", "Bob"])
+unique_user_count = users.distinct().count()
+print(f"Unique users: {unique_user_count}")
+
+24Count Empty Lines in a File
+
+lines = sc.parallelize(["First line", "", "Second line", "", "", "Third line"])
+empty_lines = lines.filter(lambda x: x.strip() == "").count()
+print(f"Empty lines: {empty_lines}")
+
+25 You have a dataset of integers. Find the total sum using reduce().
+
+numbers = sc.parallelize([10, 20, 30, 40, 50])
+
+26 Given a dataset of scores, find the maximum score.
+scores = sc.parallelize([85, 92, 78, 96, 88])
+27 Find the product of all numbers in an RDD.
+
+values = sc.parallelize([2, 3, 4, 5])
+
+product = values.reduce(lambda a, b: a * b)
+
+28 Join all words in an RDD into a single sentence.
+words = sc.parallelize(["PySpark", "is", "super", "cool"])
+
+sentence = words.reduce(lambda a, b: a + " " + b)
+
+29  Given a list of words, use reduce() to find the longest word.
+words = sc.parallelize(["elephant", "dog", "hippopotamus", "cat"])
+
+longest = words.reduce(lambda a, b: a if len(a) > len(b) else b)
